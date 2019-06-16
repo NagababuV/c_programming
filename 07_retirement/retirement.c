@@ -26,21 +26,21 @@ void pBI(int m, double b){
   printf("Age %3d month %2d you have $%.2lf\n", age,ms,b);
 }
 
-void retirement(int sA,double i, retire_info w, retire_info r){
+void retirement(int startAge,double initial, retire_info working, retire_info retired){
   int m;
-  int aM = sA;
-  double b = i;
+  int aM = startAge;
+  double b = initial;
 
-  for(m=0; m<w.months;m++){
+  for(m=0; m<working.months;m++){
     pBI(aM,b);
     aM++;
-    b = nB(b,w);
+    b = nB(b,working);
   }
   
-  for(m=0; m<r.months;m++){
+  for(m=0; m<retired.months;m++){
     pBI(aM,b);
     aM++;
-    b = nB(b,r);
+    b = nB(b,retired);
   }
 }
 
