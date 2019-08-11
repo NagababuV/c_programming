@@ -17,8 +17,8 @@ size_t maxSeq(int *array, size_t n){
     else{
       if(aux > len){
 	len = aux;
-	aux = 1;
       }
+      aux = 1;
     }
   }
 
