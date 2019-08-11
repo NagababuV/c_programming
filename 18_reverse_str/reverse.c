@@ -10,7 +10,7 @@ void reverse(char * str) {
   for(i= 0; str[i]!='\0'; i++)
     cont++;
 
-  if(cont < 2) return;
+  if(cont < 1) return;
   
   char aux;
 
