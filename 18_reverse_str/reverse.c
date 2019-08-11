@@ -4,6 +4,23 @@
 
 void reverse(char * str) {
   //WRITE ME!
+  int i;
+  int cont = -1;
+
+  for(i= 0; str[i]!='\0'; i++)
+    cont++;
+
+  if(cont < 2) return;
+  
+  char aux;
+
+  for(i = 0; i<cont; i++,cont--){
+
+    aux  = str[i];
+    str[i] = str[cont];
+    str[cont] = aux;
+
+  }
 }
 
 int main(void) {
