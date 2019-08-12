@@ -4,6 +4,7 @@
 
 void reverse(char * str) {
   //WRITE ME!
+  if(str == NULL) return;
   int i;
   int cont = -1;
 
