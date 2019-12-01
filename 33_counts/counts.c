@@ -50,7 +50,7 @@ void printCounts(counts_t * c, FILE * outFile) {
     fprintf(outFile,"%s: %zd\n",x->str,x->cnt);
   }
   if(c->unkown!=0)
-    fprintf(outFile,"<unkown> : %zd\n",c->unkown);
+    fprintf(outFile,"<unknown> : %zd\n",c->unkown);
 }
 
 void freeCounts(counts_t * c) {
