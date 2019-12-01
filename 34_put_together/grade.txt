@@ -1,4 +1,4 @@
-Grading at Sun Dec  1 16:30:03 UTC 2019
+Grading at Sun Dec  1 16:37:27 UTC 2019
 Attempting to compile:
 rm -f  outname.o  counts.o  main.o  kv.o count_values *~
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 outname.c
@@ -13,217 +13,26 @@ testcase1 passed, your program successfully indicated a failure
 valgrind was clean
 #################################################
 testcase2:
-I expected to find a file called '62list1a.txt.counts' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-62list1a.txt
-62list1b.txt
-62list2a.txt
-62list2b.txt
-62list2c.txt
-62list3a.txt
-counts.c
-counts.h
-counts.o
-count_values
-count_values.stderr
-count_values.stdout
-grade.txt
-kv.c
-kv.h
-kv.o
-kvs1.txt
-kvs2.txt
-list1a.txt
-list1a.txt.ans
-list1b.txt
-list1b.txt.ans
-list2a.txt
-list2a.txt.ans
-list2b.txt
-list2b.txt.ans
-list2c.txt
-list2c.txt.ans
-main.c
-main.o
-Makefile
-outname.c
-outname.h
-outname.o
-README
-temp.txt
-vg.log
+Line_6_did_not_match
+Your file did not match the expected ouput
 Comparing file list1a.txt.counts with answer
 Your output is correct
 Comparing file list1b.txt.counts with answer
-I expected to find a file called '62list1b.txt.counts' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-62list1a.txt
-62list1b.txt
-62list2a.txt
-62list2b.txt
-62list2c.txt
-62list3a.txt
-counts.c
-counts.h
-counts.o
-count_values
-count_values.stderr
-count_values.stdout
-grade.txt
-kv.c
-kv.h
-kv.o
-kvs1.txt
-kvs2.txt
-list1a.txt
-list1a.txt.ans
-list1b.txt
-list1b.txt.ans
-list2a.txt
-list2a.txt.ans
-list2b.txt
-list2b.txt.ans
-list2c.txt
-list2c.txt.ans
-main.c
-main.o
-Makefile
-outname.c
-outname.h
-outname.o
-README
-temp.txt
-vg.log
+Line_7_did_not_match
+Your file did not match the expected ouput
 Your output is incorrect
 #################################################
 testcase3:
-I expected to find a file called '62list2a.txt.counts' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-62list1a.txt
-62list1b.txt
-62list2a.txt
-62list2b.txt
-62list2c.txt
-62list3a.txt
-counts.c
-counts.h
-counts.o
-count_values
-count_values.stderr
-count_values.stdout
-grade.txt
-kv.c
-kv.h
-kv.o
-kvs1.txt
-kvs2.txt
-list1a.txt
-list1a.txt.ans
-list1b.txt
-list1b.txt.ans
-list2a.txt
-list2a.txt.ans
-list2b.txt
-list2b.txt.ans
-list2c.txt
-list2c.txt.ans
-main.c
-main.o
-Makefile
-outname.c
-outname.h
-outname.o
-README
-temp.txt
-vg.log
+Your file matched the expected output
 Comparing file list2a.txt.counts with answer
 Your output is correct
 Comparing file list2b.txt.counts with answer
-I expected to find a file called '62list2b.txt.counts' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-62list1a.txt
-62list1b.txt
-62list2a.txt
-62list2b.txt
-62list2c.txt
-62list3a.txt
-counts.c
-counts.h
-counts.o
-count_values
-count_values.stderr
-count_values.stdout
-grade.txt
-kv.c
-kv.h
-kv.o
-kvs1.txt
-kvs2.txt
-list1a.txt
-list1a.txt.ans
-list1b.txt
-list1b.txt.ans
-list2a.txt
-list2a.txt.ans
-list2b.txt
-list2b.txt.ans
-list2c.txt
-list2c.txt.ans
-main.c
-main.o
-Makefile
-outname.c
-outname.h
-outname.o
-README
-temp.txt
-vg.log
+Line_5_did_not_match
+Your file did not match the expected ouput
 Your output is incorrect
 Comparing file list2c.txt.counts with answer
-I expected to find a file called '62list2c.txt.counts' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-62list1a.txt
-62list1b.txt
-62list2a.txt
-62list2b.txt
-62list2c.txt
-62list3a.txt
-counts.c
-counts.h
-counts.o
-count_values
-count_values.stderr
-count_values.stdout
-grade.txt
-kv.c
-kv.h
-kv.o
-kvs1.txt
-kvs2.txt
-list1a.txt
-list1a.txt.ans
-list1b.txt
-list1b.txt.ans
-list2a.txt
-list2a.txt.ans
-list2b.txt
-list2b.txt.ans
-list2c.txt
-list2c.txt.ans
-main.c
-main.o
-Makefile
-outname.c
-outname.h
-outname.o
-README
-temp.txt
-vg.log
+Line_5_did_not_match
+Your file did not match the expected ouput
 Your output is incorrect
 #################################################
 testcase4:
@@ -231,10 +40,15 @@ I expected to find a file called '62list3a.txt.counts' but it did not exist
 (or was not a regular file)
 Here are the files that I can find:
 62list1a.txt
+62list1a.txt.counts
 62list1b.txt
+62list1b.txt.counts
 62list2a.txt
+62list2a.txt.counts
 62list2b.txt
+62list2b.txt.counts
 62list2c.txt
+62list2c.txt.counts
 62list3a.txt
 counts.c
 counts.h
@@ -270,44 +84,7 @@ temp.txt
 vg.log
 Comparing file list3a.txt.counts with answer
 Your output is correct
-  - Valgrind reported errors
-valgrind was not clean
-==1213== Memcheck, a memory error detector
-==1213== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==1213== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==1213== 
-==1213== Parent PID: 1212
-==1213== 
-==1213== 
-==1213== HEAP SUMMARY:
-==1213==     in use at exit: 32,226 bytes in 31 blocks
-==1213==   total heap usage: 65 allocs, 34 frees, 69,709 bytes allocated
-==1213== 
-==1213== 22 bytes in 1 blocks are definitely lost in loss record 1 of 10
-==1213==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1213==    by 0x400A1F: computeOutputFileName (outname.c:10)
-==1213==    by 0x401028: main (main.c:98)
-==1213== 
-==1213== 576 (24 direct, 552 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 10
-==1213==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1213==    by 0x400A71: createCounts (counts.c:7)
-==1213==    by 0x400D8A: countFrFile (main.c:14)
-==1213==    by 0x400F1B: countFile (main.c:45)
-==1213==    by 0x400FF4: main (main.c:94)
-==1213== 
-==1213== 31,628 (16 direct, 31,612 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 10
-==1213==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1213==    by 0x4011BA: readKVs (kv.c:32)
-==1213==    by 0x400F8F: main (main.c:84)
-==1213== 
-==1213== LEAK SUMMARY:
-==1213==    definitely lost: 62 bytes in 3 blocks
-==1213==    indirectly lost: 32,164 bytes in 28 blocks
-==1213==      possibly lost: 0 bytes in 0 blocks
-==1213==    still reachable: 0 bytes in 0 blocks
-==1213==         suppressed: 0 bytes in 0 blocks
-==1213== 
-==1213== For counts of detected and suppressed errors, rerun with: -v
-==1213== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 
 Overall Grade: D
