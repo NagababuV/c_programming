@@ -4,6 +4,7 @@
 #include "deck.h"
 #include "future.h"
 
+size_t strToInt(char* str);
 deck_t * hand_from_string(const char * str, future_cards_t * fc);
 deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc);
 
