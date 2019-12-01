@@ -279,14 +279,14 @@ unsigned * get_match_counts(deck_t * hand){
     else{
       int j;
       for(j = st_idx; j <i;j++){
-	ret_arry[j] = count;
+	ret_array[j] = count;
       }
       st_idx = i;
       cur_val = card_p->value;
       count = 1;
     }
   }
-  for(i=st_idx; j< hand->n_cards;i++){
+  for(i=st_idx; i< hand->n_cards;i++){
     ret_array[i] = count;
   }
 
