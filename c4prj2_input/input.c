@@ -60,14 +60,14 @@ deck_t * hand_from_string(const char *str, future_cards_t *fc){
       }
       if(str[count] == '?'){
 	c_name = (char *)realloc(c_name,(lstIdx-count+1)*sizeof(*c_name));
-	c_name = strcpy(c_name, str+count, (size_t)(lstIdx-count));
+	c_name = strncpy(c_name, str+count, (size_t)(lstIdx-count));
 	c_name[lstIdx - count] = '\0';
 	idx = strToInt(c_name+1);
 	add_card = add_empty_card(ret_d);
 	add_future_card(fc,idx,add_card);
 	count = lstIdx;
       }else{
-	add_card_to(ret_d, card_from_letters(str[coun],str[count+1]));
+	add_card_to(ret_d, card_from_letters(str[count],str[count+1]));
 	count+=2;
       }
       g_count++;
