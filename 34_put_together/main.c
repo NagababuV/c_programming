@@ -31,12 +31,16 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
-  if(argc<2){
+  if(argc<3){
     fprintf(stderr,"no enough arguments");
     return EXIT_FAILURE;
   }
  //read the key/value pairs from the file named by argv[1] (call the result kv)
   kvarray_t *kv=readKVs(argv[1]);
+  if(kv == NULL){
+    fprintf(stderr,"Error reading pairs");
+    return EXIT_FAILURE;
+  }
  //count from 2 to argc (call the number you count i)
   int i;
   for (i=2;i<argc;i++){
@@ -49,6 +53,9 @@ int main(int argc, char ** argv) {
     char* outName = computeOutputFileName(argv[i]);
     //open the file named by outName (call that f)
     FILE *f = fopen(outName,"w");
+    if(f==NULL){
+      fprintf(stderr,"Error in outFile");
+    }
     //print the counts from c into the FILE f
     printCounts(c,f);
     //close f
