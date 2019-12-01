@@ -1,10 +1,16 @@
-Grading at Sun Dec  1 17:39:22 UTC 2019
+Grading at Sun Dec  1 19:09:33 UTC 2019
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
-gcc: error: input.c: No such file or directory
-gcc: fatal error: no input files
-compilation terminated.
+input.c:1:18: error: missing terminating > character
+input.c: In function ‘hand_from_string’:
+input.c:63:11: error: too many arguments to function ‘strcpy’
+  c_name = strcpy(c_name, str+count, (size_t)(lstIdx-count));
+           ^
+input.c:70:43: error: ‘coun’ undeclared (first use in this function)
+  add_card_to(ret_d, card_from_letters(str[coun],str[count+1]));
+                                           ^
+input.c:70:43: note: each undeclared identifier is reported only once for each function it appears in
 Compilation of input.c failed
 
 Overall Grade: F
