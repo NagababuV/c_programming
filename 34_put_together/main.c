@@ -5,8 +5,51 @@
 #include "counts.h"
 #include "outname.h"
 
+counts_t * countFrFile(FILE* f, kvarray_t * kvPairs){
+  char *line=NULL;
+  size_t size=0;
+  char *key = NULL;
+  char *value = NULL;
+
+  counts_t *ans = createCounts();
+  if(ans==NULL)
+    return NULL;
+
+  while(getline(&line,&size,f)>=0){
+    int len = strlen(line);
+    if(line[len-1] == '\n'){
+      key = realloc(key,len*sizeof(*key));
+      strncpy(key,line,len);
+      key[len-1] = '\0';
+    }else{
+      key = realloc(key,(len+1)*sizeof(*key));
+      strncpy(key,line,len);
+      key[len] = '\0';
+    }
+    value = lookupValue(kvPairs,key);
+    addCount(ans,value);
+  }
+  free(line);
+  free(key);
+
+  return ans;
+
+}
+
 counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   //WRITE ME
+  FILE * f=fopen(filename,"r");
+  if(f==NULL)
+    return NULL;
+
+  counts_t * ans= countFrFile(f,kvPairs);
+  if(ans ==NULL)
+    return NULL;
+
+  fclose(f);
+  return ans;
+  
+  /*
   counts_t *ans = createCounts();
   FILE* f=fopen(filename,"r");
   if(f==NULL)
@@ -26,7 +69,9 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   if(fclose(f)!=0)
     return NULL;
   
-  return ans;
+    return ans;*/
+  
+  
 }
 
 int main(int argc, char ** argv) {
@@ -55,6 +100,7 @@ int main(int argc, char ** argv) {
     FILE *f = fopen(outName,"w");
     if(f==NULL){
       fprintf(stderr,"Error in outFile");
+      return EXIT_FAILURE;
     }
     //print the counts from c into the FILE f
     printCounts(c,f);
