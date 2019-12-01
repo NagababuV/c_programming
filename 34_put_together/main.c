@@ -19,7 +19,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
     char* n= strchr(line,'\n');
     if(n!=NULL)
       *n = '\0';
-    char*x = lookupValue(kvPairs,line);
+    char* x = lookupValue(kvPairs,line);
     addCount(ans,x);
   }
   free(line);
@@ -48,11 +48,11 @@ int main(int argc, char ** argv) {
     //compute the output file name from argv[i] (call this outName)
     char* outName = computeOutputFileName(argv[i]);
     //open the file named by outName (call that f)
-    FILE *f1 = fopen(outName,"w");
+    FILE *f = fopen(outName,"w");
     //print the counts from c into the FILE f
-    printCounts(c,f1);
+    printCounts(c,f);
     //close f
-    if(fclose(f1)!=0)
+    if(fclose(f)!=0)
       return EXIT_FAILURE;
     //free the memory for outName and c
     free(outName);
