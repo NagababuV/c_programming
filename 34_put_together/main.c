@@ -76,7 +76,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
-  if(argc<4){
+  if(argc<2){
     fprintf(stderr,"no enough arguments");
     return EXIT_FAILURE;
   }
