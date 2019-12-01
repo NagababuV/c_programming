@@ -19,7 +19,7 @@ counts_t * countFrFile(FILE* f, kvarray_t * kvPairs){
     int len = strlen(line);
     if(line[len-1] == '\n'){
       key = realloc(key,len*sizeof(*key));
-      strncpy(key,line,len);
+      strncpy(key,line,len-1);
       key[len-1] = '\0';
     }else{
       key = realloc(key,(len+1)*sizeof(*key));
