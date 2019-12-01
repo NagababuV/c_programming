@@ -48,7 +48,7 @@ int main(int argc, char ** argv) {
   }
   else{
     int i;
-    for(i=0; i<argc;i++){
+    for(i=1; i<argc;i++){
       char **arr =NULL;
       char *line =NULL;
       size_t sz=0;
