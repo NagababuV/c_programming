@@ -76,7 +76,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
-  if(argc<3){
+  if(argc<4){
     fprintf(stderr,"no enough arguments");
     return EXIT_FAILURE;
   }
@@ -97,7 +97,7 @@ int main(int argc, char ** argv) {
     //compute the output file name from argv[i] (call this outName)
     char* outName = computeOutputFileName(argv[i]);
     //open the file named by outName (call that f)
-    FILE *f = fopen(outName,"W");
+    FILE *f = fopen(outName,"w");
     if(f==NULL){
       fprintf(stderr,"Error in outFile");
       return EXIT_FAILURE;
