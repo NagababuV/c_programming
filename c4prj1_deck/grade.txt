@@ -1,0 +1,14 @@
+Grading at Sun Dec  1 17:15:33 UTC 2019
+Compiling deck.c -> deck.o
+Compiling eval.c -> eval.o
+eval.c: In function ‘get_match_counts’:
+eval.c:282:2: error: ‘ret_arry’ undeclared (first use in this function)
+  ret_arry[j] = count;
+  ^
+eval.c:282:2: note: each undeclared identifier is reported only once for each function it appears in
+eval.c:289:17: error: ‘j’ undeclared (first use in this function)
+   for(i=st_idx; j< hand->n_cards;i++){
+                 ^
+Compilation of eval.c failed
+
+Overall Grade: F
