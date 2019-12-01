@@ -24,7 +24,7 @@ void add_future_card(future_cards_t *fc,size_t index, card_t * ptr){
   (fc->decks[index]).cards = (card_t**)realloc((fc->decks[index]).cards,
 					       nw_n_cards*sizeof(*(fc->decks[index].cards)));
   (fc->decks[index]).n_cards++;
-  (fc->decks[index]).card[nw_n_cards-1] = ptr;
+  (fc->decks[index]).cards[nw_n_cards-1] = ptr;
 
 }
 
@@ -40,7 +40,7 @@ void future_cards_from_deck(deck_t *deck, future_cards_t *fc){
   card_t *c;
   size_t i,j;
 
-  for(i=0; i < fc-<n_decks;i++){
+  for(i=0; i < fc->n_decks;i++){
     c = deck->cards[i];
     d= fc->decks[i];
     for(j=0; j<d.n_cards;j++){
